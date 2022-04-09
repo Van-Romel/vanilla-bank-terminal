@@ -1,4 +1,29 @@
-# Vanilla Bank
+<h1 align="center">
+  Vanilla Bank
+</h1>
 
+<br>
+
+## 📷 Demonstração
+
+
+## 🚀 Tecnologias
+
+Este projeto foi desenvolvido com as seguintes tecnologias:
+
+✔️ Java
+
+✔️ Outras
+
+## 💡 Features
+
+- [x] Criar diagrama de classes
+- [x] Elaborar o quadro Kanban
+- [ ] Rodar o porgama
+
+## 💻 Projeto
+
+Vanilla Bank é uma aplicação de terminal, para gerenciar contas bancárias e clientes cadastrados.
+  
 <h4 align="center">
   🚧  Projeto Vanilla Bank 🚀 Em construção ... 🚧
