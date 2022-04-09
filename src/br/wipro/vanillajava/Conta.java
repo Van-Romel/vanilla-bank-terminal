@@ -1,12 +1,13 @@
 package br.wipro.vanillajava;
 
-import java.util.List;
-
 public abstract class Conta {
 
-    private int numero;
-    private double saldo;
-    private CartaoDeCredito cartaoDeCredito;
+    protected int numero;
+    protected double saldo;
+    protected CartaoDeCredito cartaoDeCredito;
+
+    public Conta() {
+    }
 
     public void dadosConta() {
         System.out.printf("Número da conta: %d%n" +
@@ -20,7 +21,6 @@ public abstract class Conta {
     }
 
     public void sacar(double valor) {
-        if (valor > this.saldo) throw new IllegalArgumentException("Saldo insuficiente");
         this.saldo -= valor;
     }
 
