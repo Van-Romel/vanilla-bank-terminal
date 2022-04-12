@@ -3,7 +3,10 @@ package br.wipro.vanillajava;
 public class ContaCorrente extends Conta {
 
     public ContaCorrente(int numero, double saldo, String cartaoDeCredito, Cliente cliente) {
-        super(numero, saldo, cartaoDeCredito, cliente);
+        this.numero = numero;
+        this.saldo = saldo;
+        this.cartaoDeCredito = cartaoDeCredito;
+        this.cliente = cliente;
     }
 
     @Override
