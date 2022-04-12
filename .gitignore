@@ -11,3 +11,4 @@ vanilla-bank.iml
 
 # Intellij
 .idea/
+/bin/
