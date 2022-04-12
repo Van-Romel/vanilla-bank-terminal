@@ -1,6 +1,7 @@
 package br.wipro.vanillajava;
 
 public class ContaEspecial extends Conta {
+
 	private double limite;
 
 	public ContaEspecial() {

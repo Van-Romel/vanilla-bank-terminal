@@ -1,22 +1,22 @@
 package br.wipro.vanillajava;
 
+import java.util.Objects;
+
 public class Cliente {
 
-    protected int id;
     protected String nome;
-    protected int cpf;
+    protected String cpf;
 
-    public Cliente(int id, String nome, int cpf) {
-        this.id = id;
+    public Cliente(String nome, String cpf) {
         this.nome = nome;
         this.cpf = cpf;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
@@ -28,11 +28,17 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public int getId() {
-        return id;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cliente cliente = (Cliente) o;
+        return Objects.equals(cpf, cliente.cpf);
     }
 
-    public void setId(int id) {
-        this.id = id;
+    @Override
+    public int hashCode() {
+        return Objects.hash(cpf);
     }
 }
