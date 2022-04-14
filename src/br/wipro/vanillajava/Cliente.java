@@ -6,10 +6,12 @@ public class Cliente {
 
     protected String nome;
     protected String cpf;
+    protected String pin;
 
-    public Cliente(String nome, String cpf) {
+    public Cliente(String nome, String cpf, String pin) {
         this.nome = nome;
         this.cpf = cpf;
+        this.pin = pin;
     }
 
     public String getCpf() {
@@ -28,6 +30,13 @@ public class Cliente {
         this.nome = nome;
     }
 
+    public String getPin() {
+        return pin;
+    }
+
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
 
     @Override
     public boolean equals(Object o) {
