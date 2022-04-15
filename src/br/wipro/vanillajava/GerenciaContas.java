@@ -1,6 +1,8 @@
 package br.wipro.vanillajava;
 
 import java.util.ArrayList;
+import java.util.Optional;
+import java.util.Scanner;
 
 public class GerenciaContas {
 
@@ -43,4 +45,20 @@ public class GerenciaContas {
         return clientes;
     }
 
+    public Optional<Cliente> confirmaLogin(ArrayList<Cliente> clientes, String cpf, Scanner scanner) {
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Digite o seu PIN de acesso, por favor.");
+            String pin1 = scanner.next();
+
+            for (Cliente cliente : clientes) {
+                if (cliente.cpf.equals(cpf) && cliente.pin.equals(pin1)) {
+                    System.out.println("Bem-vindo, " + cliente.nome + "!");
+                    return Optional.of(cliente);
+                } else
+                    System.out.println("O PIN inserido é inválido.\n\n\n\n Você tem mais " + (2 - i) + " tentativas.");
+            }
+            if (i == 2) return Optional.empty();
+        }
+        return Optional.empty();
+    }
 }

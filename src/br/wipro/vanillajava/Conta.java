@@ -27,6 +27,11 @@ public abstract class Conta {
         this.saldo -= valor;
     }
 
+    public void transferir(Conta contaDestino, double valor) {
+        this.sacar(valor);
+        contaDestino.depositar(valor);
+    }
+
     public Conta(int numero, double saldo, String cartaoDeCredito, Cliente cliente) {
         this.numero = numero;
         this.saldo = saldo;
