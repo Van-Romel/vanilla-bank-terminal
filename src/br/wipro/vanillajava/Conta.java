@@ -5,8 +5,7 @@ public abstract class Conta {
     protected int numero;
     protected double saldo;
     protected String cartaoDeCredito;
-    // TODO - quando criar um cliente, tem que importar ele aqui.
-    protected Cliente cliente;
+    protected String cpfCliente;
 
     public Conta() {
     }
@@ -16,7 +15,7 @@ public abstract class Conta {
                         "Saldo da conta: %.2f%n" +
                         "Cartão de crédito: %s%n" +
                         "Cliente: %s%n",
-                this.numero, this.saldo, this.cartaoDeCredito, this.cliente.getNome());
+                this.numero, this.saldo, this.cartaoDeCredito, this.cpfCliente);
     }
 
     public void depositar(double valor) {
@@ -27,11 +26,11 @@ public abstract class Conta {
         this.saldo -= valor;
     }
 
-    public Conta(int numero, double saldo, String cartaoDeCredito, Cliente cliente) {
+    public Conta(int numero, double saldo, String cartaoDeCredito, String cpfCliente) {
         this.numero = numero;
         this.saldo = saldo;
         this.cartaoDeCredito = cartaoDeCredito;
-        this.cliente = cliente;
+        this.cpfCliente = cpfCliente;
     }
 
     public int getNumero() {
@@ -46,8 +45,8 @@ public abstract class Conta {
         return cartaoDeCredito;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public String getcpfCliente() {
+        return cpfCliente;
     }
 
 }

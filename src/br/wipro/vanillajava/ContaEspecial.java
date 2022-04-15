@@ -8,8 +8,8 @@ public class ContaEspecial extends Conta {
 
 	}
 
-	public ContaEspecial(int numero, double salario, String cartaoDeCredito, Cliente cliente, double limite) {
-		super(numero, salario, cartaoDeCredito, cliente);
+	public ContaEspecial(int numero, double saldo, String cartaoDeCredito, String cpfCliente, double limite) {
+		super(numero, saldo, cartaoDeCredito, cpfCliente);
 		this.limite = limite;
 	}
 
@@ -18,5 +18,6 @@ public class ContaEspecial extends Conta {
 		if ((this.getSaldo() + this.limite) < valor)
 			throw new IllegalArgumentException("Saldo insuficiente");
 		this.saldo -= valor;
+		System.out.println("Saque realizado");
 	}
 }
