@@ -28,8 +28,24 @@ public class GerenciaContas {
         return contaEspecial;
     }
 
-    public void removeContaCorrente(ContaCorrente contaCorrente) {
-        contasCorrente.remove(contaCorrente);
+    public DataBase removeConta(DataBase dataBase, ContaCorrente contaCorrente, ContaEspecial contaEspecial) {
+
+        if (contaCorrente != null) {
+            dataBase.contasCorrente.remove(contaCorrente);
+        } else if (contaEspecial != null) {
+            dataBase.contasEspeciais.remove(contaEspecial);
+        } else {
+            System.out.println("Conta não encontrada.");
+        }
+        return dataBase;
+    }
+
+    public String consultarDadosConta(ContaCorrente contaCorrente, ContaEspecial contaEspecial) {
+        if (contaCorrente != null) {
+            return contaCorrente.toString();
+        } else if (contaEspecial != null) {
+            return contaEspecial.toString();
+        } else return "Conta não encontrada.";
     }
 
     public ArrayList<ContaCorrente> getContasCorrente() {
