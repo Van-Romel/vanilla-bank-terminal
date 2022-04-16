@@ -11,9 +11,13 @@ public class ContaCorrente extends Conta {
 
     @Override
     public void sacar(double valor) {
-        if (valor > this.getSaldo()) throw new IllegalArgumentException("Saldo insuficiente");
-        this.saldo -= valor;
-        System.out.println("Saque realizado");
+        if (valor > this.getSaldo()){
+            System.out.println("Saldo insuficiente");
+        }
+        else {
+            this.saldo -= valor;
+            System.out.println("Saque realizado");
+        }
 
     }
 }

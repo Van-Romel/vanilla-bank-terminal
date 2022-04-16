@@ -57,8 +57,6 @@ public class GerenciaContas {
                     System.out.println("Insira o CPF do cliente");
                     cpf = s.next();
                     for(Cliente cliente : clientes){
-                        System.out.println(cliente.getCpf()+"  get");
-                        System.out.println(cpf+"  cpf");
                         if(cliente.getCpf().equals(cpf)){
                             verificaCliente=1;
                         }

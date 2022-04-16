@@ -15,9 +15,13 @@ public class ContaEspecial extends Conta {
 
 	@Override
 	public void sacar(double valor) {
-		if ((this.getSaldo() + this.limite) < valor)
-			throw new IllegalArgumentException("Saldo insuficiente");
-		this.saldo -= valor;
-		System.out.println("Saque realizado");
+		if ((this.getSaldo() + this.limite) < valor){
+			System.out.println("Saldo insuficiente");
+		}
+		else{
+			this.saldo -= valor;
+			System.out.println("Saque realizado");
+		}
+
 	}
 }
