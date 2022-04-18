@@ -19,7 +19,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 - [x] Criar diagrama de classes
 - [x] Elaborar o quadro Kanban
-- [ ] Rodar o progama
+- [x] Rodar o progama
 
 ## 💻 Projeto
 
